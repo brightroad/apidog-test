@@ -1,0 +1,2469 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "IBM BPM FVT Test REST Interface - Simple Types Tests",
+    "description": "IBM Business Process Manager REST FVT resources for REST invocation test - Simple Types.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/fayizmk/ibm-bpm_fvt_test_rest_interface_simple_types_tests/1.0.0",
+      "description": "SwaggerHub API Auto Mocking"
+    },
+    {
+      "url": "http://localhost:9080/test"
+    },
+    {
+      "url": "https://localhost:9080/test"
+    }
+  ],
+  "security": [
+    {
+      "basic_auth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "datatypes"
+    }
+  ],
+  "paths": {
+    "/datatypes/noInputNoReturn": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "No input / no return",
+        "description": "No input / no return - GET",
+        "operationId": "getNoInputNoReturn",
+        "responses": {
+          "204": {
+            "description": "successful operation"
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an operation doing nothing - no input, no return."
+    },
+    "/datatypes/onlyInputNoReturn/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Only input / no return",
+        "description": "Only input / no return - GET",
+        "operationId": "getOnlyInputNoReturn",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "description": "True or false input.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an operation with only input, no return value."
+    },
+    "/datatypes/noInputOnlyReturn": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "No input / only return",
+        "description": "No input / only return - GET",
+        "operationId": "getNoInputOnlyReturn",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an operation with no input, only return value."
+    },
+    "/datatypes/boolean/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return boolean value",
+        "description": "Gets and returns a boolean value - GET operation",
+        "operationId": "getPathEchoBoolean",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "description": "True or false input.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return Boolean value",
+        "description": "Puts and returns a boolean value - PUT operation",
+        "operationId": "putPathEchoBoolean",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "description": "True or false input.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return boolean value",
+        "description": "Posts and returns a boolean value - POST operation",
+        "operationId": "postPathEchoBoolean",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "description": "True or false input.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete operation",
+        "description": "Returns a boolean value - DELETE operation",
+        "operationId": "deletePathEchoBoolean",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "description": "True or false input.",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an echo operation for boolean values using input parameter in the path."
+    },
+    "/datatypes/boolean": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return boolean value",
+        "description": "Gets and returns a boolean value - GET operation",
+        "operationId": "getQueryEchoBoolean",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "description": "True or false input.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return boolean value",
+        "description": "Puts and returns a boolean value - PUT operation",
+        "operationId": "putBodyEchoBoolean",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "boolean"
+              }
+            },
+            "text/plain": {
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "NoContent - successful operation without value param"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return boolean value",
+        "description": "Posts and returns a boolean value - POST operation",
+        "operationId": "postBodyEchoBoolean",
+        "requestBody": {
+          "description": "True or false input.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return boolean value",
+        "description": "Deletes and returns a boolean value - POST operation",
+        "operationId": "deleteQueryEchoBoolean",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "description": "True or false input.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an echo operation for boolean values using input parameter in the query."
+    },
+    "/datatypes/date/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return date",
+        "description": "Gets and returns a date value - GET operation",
+        "operationId": "getPathEchoDate",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return date",
+        "description": "Puts and returns a date value - PUT operation",
+        "operationId": "putPathEchoDate",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return date",
+        "description": "Posts and returns a date value - POST operation",
+        "operationId": "postPathEchoDate",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return date",
+        "description": "Deletes and returns a date value - DELETE operation",
+        "operationId": "deletePathEchoDate",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for date values using input parameter in the path."
+    },
+    "/datatypes/date": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return date value",
+        "description": "Gets and returns a date value - GET operation",
+        "operationId": "getQueryEchoDate",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return date value",
+        "description": "Puts and returns a date value - PUT operation",
+        "operationId": "putBodyEchoDate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return date",
+        "description": "Posts and returns a date value - POST operation",
+        "operationId": "postBodyEchoDate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return date",
+        "description": "Deletes and returns a date value - DELETE operation",
+        "operationId": "deleteQueryEchoDate",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for date values using input parameter in the query."
+    },
+    "/datatypes/decimal/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return decimal value.",
+        "description": "Gets and returns a decimal value - GET operation",
+        "operationId": "getPathEchoDecimal",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return decimal value.",
+        "description": "Puts and returns a decimal value - PUT operation",
+        "operationId": "putPathEchoDecimal",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return decimal value.",
+        "description": "Posts and returns a decimal value - POST operation",
+        "operationId": "postPathEchoDecimal",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return decimal value.",
+        "description": "Deletes and returns a decimal value - DELETE operation",
+        "operationId": "deletePathEchoDecimal",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for decimal values using input parameter in the path."
+    },
+    "/datatypes/decimal": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return decimal value.",
+        "description": "Gets and returns a decimal value - GET operation",
+        "operationId": "getQueryEchoDecimal",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "float"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return decimal value.",
+        "description": "Deletes and returns a decimal value - DELETE operation",
+        "operationId": "deleteQueryEchoDecimal",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for decimal values using input parameter in the query."
+    },
+    "/datatypes/integer/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return integer",
+        "description": "Gets and returns an integer value - GET operation",
+        "operationId": "getPathEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return integer",
+        "description": "Puts and returns int32 - PUT operation",
+        "operationId": "putPathEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return integer",
+        "description": "Posts and returns an integer value - POST operation",
+        "operationId": "postPathEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return integer",
+        "description": "Delets and returns an integer value - DELETE operation",
+        "operationId": "deletePathEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for int32 values using input parameter in the path."
+    },
+    "/datatypes/integer": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return integer",
+        "description": "Gets and returns an integer GET operation",
+        "operationId": "getQueryEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return integer",
+        "description": "Puts and returns an int32 value - PUT operation",
+        "operationId": "putBodyEchoInteger",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "text/plain": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return integer",
+        "description": "Posts and returns an integer value - POST operation",
+        "operationId": "postQueryEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return integer",
+        "description": "Deletes and returns an integer value - DELETE operation",
+        "operationId": "deleteQueryEchoInteger",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for int32 values using input parameter in the body."
+    },
+    "/datatypes/dateTime/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return DateTime",
+        "description": "Gets and returns an time value - GET operation",
+        "operationId": "getPathEchoDateTime",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return DateTime",
+        "description": "Puts and returns an time value - PUT operation",
+        "operationId": "putPathEchoDateTime",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return DateTime",
+        "description": "Posts and returns an time value - POST operation",
+        "operationId": "postPathEchoDateTime",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return DateTime",
+        "description": "Deletes and returns an time value - DELETE operation",
+        "operationId": "deletePathEchoDateTime",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for date-time values using input parameter in the path."
+    },
+    "/datatypes/dateTime": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return DateTime",
+        "description": "Gets and returns an time value - GET operation",
+        "operationId": "getQueryEchoDateTime",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return DateTime",
+        "description": "Puts and returns an time value - PUT operation",
+        "operationId": "putBodyEchoDateTime",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return DateTime",
+        "description": "Posts and returns an time value - POST operation",
+        "operationId": "postBodyEchoDateTime",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return DateTime",
+        "description": "Deletes and returns an time value - DELETE operation",
+        "operationId": "deleteQueryEchoDateTime",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for date-time values using input parameter in the query."
+    },
+    "/datatypes/string/{value}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return a string value - Special handling= dedicated authentication specification",
+        "description": "Gets and returns a string value - GET operation with specific authentication specification",
+        "operationId": "getPathEchoString",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic_auth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return a string value",
+        "description": "Puts and returns a string value - PUT operation",
+        "operationId": "putPathEchoString",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "Test",
+                "Test String",
+                "This is my sample string - no SpecialChars"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return a string value",
+        "description": "Posts and returns a string value - POST operation",
+        "operationId": "postPathEchoString",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return a string value",
+        "description": "Deletes and returns a string value - DELETE operation",
+        "operationId": "deletePathEchoString",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "any formatJa"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "any format"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for string values using input parameter in the path."
+    },
+    "/datatypes/string": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return a string value",
+        "description": "Gets and returns a string value - GET operation",
+        "operationId": "getQueryEchoString",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "byte"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "NoContent - successful operation without value param"
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Put and return a string value",
+        "description": "Puts and returns a string value - PUT operation",
+        "operationId": "putBodyEchoString",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return a string value",
+        "description": "Posts and returns a string value - POST operation",
+        "operationId": "postBodyEchoString",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/postBodyEchoStringValue"
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Delete and return a string value",
+        "description": "Deletes and returns a string value - DELETE operation",
+        "operationId": "deleteQueryEchoString",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for string values using input parameter in the query."
+    },
+    "/datatypes/{multiValue}": {
+      "get": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Get and return simple-typed values",
+        "description": "Gets and returns simple-typed values - GET operation",
+        "operationId": "getQueryEcho",
+        "parameters": [
+          {
+            "name": "multiValue",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "boolVal",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "intVal",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "strVal",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "decValue",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "dateValue",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "dateTimeValue",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "datatypes"
+        ],
+        "summary": "Post and return simple-typed values",
+        "description": "Posts and returns simple-typed values - POST operation",
+        "operationId": "postQueryEcho",
+        "parameters": [
+          {
+            "name": "multiValue",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "boolVal",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "intVal",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "strVal",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "decValue",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "dateValue",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "dateTimeValue",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/postBodyEchoStringValue"
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request contains parameters that are not valid, or they are missing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-resource-description": "This resource represents an an echo operation for all kind of simple-typed input values using input parameters in the path, query and body."
+    }
+  },
+  "components": {
+    "schemas": {
+      "exception": {
+        "title": "Exception",
+        "required": [
+          "error_message",
+          "error_number"
+        ],
+        "properties": {
+          "error_number": {
+            "type": "string",
+            "description": "Message ID of the exception."
+          },
+          "error_message": {
+            "type": "string",
+            "description": "Message text of the exception."
+          },
+          "error_message_parameters": {
+            "type": "array",
+            "description": "Message text parameters of the exception.",
+            "items": {
+              "type": "string",
+              "description": "An array of parameter strings that were inserted into the error message."
+            }
+          },
+          "error_cause": {
+            "$ref": "#/components/schemas/exception"
+          }
+        },
+        "description": "Exception object describing REST API error details."
+      }
+    },
+    "requestBodies": {
+      "postBodyEchoStringValue": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "required": true
+      }
+    },
+    "securitySchemes": {
+      "basic_auth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "x-environment": "standard",
+  "x-api-acronym": "resttest",
+  "x-environment-restriction": [
+    "published"
+  ],
+  "x-rest-advanced": "copied from /(NGAUTOFVT) ngt.rest.test.app/src/doc/bpm-test-rest-simpleTypes.json"
+}
